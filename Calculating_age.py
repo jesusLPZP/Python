@@ -1,9 +1,6 @@
-year_of_birth = "2007"
-Age = "18"
+year_of_birth = int("2007")
+current_year = int("2025")
 first_name = "Jesus"
 Favorite_Hobby = "longboard"
-txt = f"My name is {first_name}, I was born in the year{year}"
-
-print(txt)
-
-print(f"I, {first_name}, also like to {Favorite_Hobby} during my freetime.")
+current_age = current_year - year_of_birth
+print(f"I, {first_name}, I am {current_age} and I also like to {Favorite_Hobby} during my freetime.")
