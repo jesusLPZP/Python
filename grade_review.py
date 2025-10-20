@@ -9,4 +9,5 @@ elif grade >= 60:
     letter_grade = "D"
 else:
     letter_grade = "F"
+    
 print(f"Your letter grade is: {letter_grade}")
