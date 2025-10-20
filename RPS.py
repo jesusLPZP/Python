@@ -13,5 +13,5 @@ elif (player1_choice == paper and player2_choice == rock):
 elif (player1_choice == scissors and player2_choice == paper):
     print("You win! Scissors cut Paper.")
 else:
-    print("You lose!")
+    print("player 2 wins!")
 
