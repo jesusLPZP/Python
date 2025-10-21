@@ -5,7 +5,7 @@ scissors = 3
 player1_choice = int(input("Player 1,Enter 1 for Rock, 2 for Paper, or 3 for Scissors: "))
 player2_choice = int(input("Player 2,Enter 1 for Rock, 2 for Paper, or 3 for Scissors: "))
 if player1_choice == player2_choice:
-    print("It's a tie! Both players chose", str(player1_choice))
+    print("It's a tie! Both players chose the same.")
 elif (player1_choice == rock and player2_choice == scissors):
     print ("You win! Rock crushes Scissors.")
 elif (player1_choice == paper and player2_choice == rock):
