@@ -3,7 +3,9 @@ rock = 1
 paper = 2
 scissors = 3
 player1_choice = int(input("Player 1,Enter 1 for Rock, 2 for Paper, or 3 for Scissors: "))
-player2_choice = int(input("Player 2,Enter 1 for Rock, 2 for Paper, or 3 for Scissors: "))
+player2_choice = random.randint(1,3)
+print(f"Player 2 chose: ",str(player2_choice))
+
 if player1_choice == player2_choice:
     print("It's a tie! Both players chose the same.")
 elif (player1_choice == rock and player2_choice == scissors):
