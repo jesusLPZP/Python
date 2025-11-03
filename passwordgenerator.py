@@ -11,11 +11,9 @@ quantity = int(input("How many passwords do you want?" ))
 for i in range(quantity):
     #inner loop to generate each password
     for i in range(length):
-        #choose a random letter from the list
         letter2 = random.choice(letter_list)
         #add the letter to the password
         letter = letter + letter2
-        #after the inner loop, print the password
     print(letter)
     #reset the password variable for the next password
     letter = ""
