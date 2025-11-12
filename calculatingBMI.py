@@ -29,3 +29,19 @@ name = input("Enter your name: ")
 # Get valid positive inputs for weight and height
 weight = getPositiveNumber("Enter weight (lbs): ")
 height = getPositiveNumber("Enter height (inches): ")
+
+#the formula to calculate BMI
+bmi = (weight / (height * height)) * 703
+#the if statement to rule out all possible BMI categories from greatest to least 
+if bmi >= 30:
+    category = "Obese"
+elif bmi >= 25:
+    category = "Overweight"
+elif bmi >=18.5:
+    category = "Normal weight"
+else:
+    category = "Underweight"
+
+# Display the BMI value and rounds it to the tenth place
+print(f"{name}, your BMI is: {bmi:.1f}")
+print(f"Based on your BMI, you are categorized as: {category}")
