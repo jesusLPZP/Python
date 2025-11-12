@@ -1,9 +1,12 @@
-# ---------------------------------------------
-# BMI Calculator Program
-# Get user input for name, height and weight
-# Make sure height and weight are positive
-# Calculate and display BMI value and BMI category
-# ---------------------------------------------
+# ----------------------------------------------------------
+# Program: BMI Calculator
+# Description:
+#   This program asks the user for their name, weight (in lbs),
+#   and height (in inches). It calculates their Body Mass Index (BMI)
+#   using a standard formula and displays the BMI value along with
+#   a weight category such as Underweight, Normal, Overweight, or Obese.
+# ----------------------------------------------------------
+
 
 def getPositiveNumber(prompt):
     """
@@ -20,6 +23,31 @@ def getPositiveNumber(prompt):
     return value
 
 
+def calculateBMI(weightPounds, heightInches):
+    """
+    Calculate  BMI = (weightPounds / heightInches^2) * 703
+    Return the BMI value based on weight (lbs) and height (inches).     
+    """
+    bmi = (weightPounds / (heightInches * heightInches)) * 703
+    return bmi
+
+
+def getCategory(bmi):
+    """
+    Determine the BMI category based on value.
+    """
+    category = ""
+    if bmi < 18.5:
+        category = "Underweight"
+    elif bmi < 25:
+        category = "Normal"
+    elif bmi < 30:
+        category = "Overweight"
+    else:
+        category = "Obese"
+    return category
+
+
 # --- Main Program ---
 print("BMI Calculator (Python)")
 
@@ -30,18 +58,11 @@ name = input("Enter your name: ")
 weight = getPositiveNumber("Enter weight (lbs): ")
 height = getPositiveNumber("Enter height (inches): ")
 
-#the formula to calculate BMI
-bmi = (weight / (height * height)) * 703
-#the if statement to rule out all possible BMI categories from greatest to least 
-if bmi >= 30:
-    category = "Obese"
-elif bmi >= 25:
-    category = "Overweight"
-elif bmi >=18.5:
-    category = "Normal weight"
-else:
-    category = "Underweight"
+# Calculate BMI and determine category
+bmivalue = calculateBMI(weight, height)
+category = getCategory(bmivalue)
 
-# Display the BMI value and rounds it to the tenth place
-print(f"{name}, your BMI is: {bmi:.1f}")
-print(f"Based on your BMI, you are categorized as: {category}")
+# Display results
+print()
+print(name, "your BMI is", round(bmivalue, 1), "(", category, ")")
+
