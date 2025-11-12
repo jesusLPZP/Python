@@ -59,10 +59,10 @@ weight = getPositiveNumber("Enter weight (lbs): ")
 height = getPositiveNumber("Enter height (inches): ")
 
 # Calculate BMI and determine category
-bmivalue = calculateBMI(weight, height)
-category = getCategory(bmivalue)
+bmiValue = calculateBMI(weight, height)
+category = getCategory(bmiValue)
 
 # Display results
 print()
-print(name, "your BMI is", round(bmivalue, 1), "(", category, ")")
+print(name, "your BMI is", round(bmiValue, 1), "(", category, ")")
 
